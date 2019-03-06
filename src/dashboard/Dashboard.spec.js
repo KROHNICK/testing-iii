@@ -17,16 +17,13 @@ describe("<Dashboard />", () => {
 
   it("contains <Display /> and <Controls />", () => {
     const component = render(<Dashboard />);
-
     component.getByText(/open/i);
     component.getByText(/unlocked/i);
   });
 
   it("button switches text", () => {
     const component = render(<Dashboard />);
-
     const button = component.getByText(/close gate/i);
-
     fireEvent.click(button);
     expect(button).toHaveTextContent(/open gate/i);
   });

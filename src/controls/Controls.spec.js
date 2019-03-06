@@ -17,14 +17,12 @@ describe("<Controls />", () => {
 
   it("checks if buttons change state", () => {
     const component = render(<Controls />);
-
     component.getByTestId(/lockbutton/i);
     component.getByTestId(/closebutton/i);
   });
 
   it("button displays close gate, lock gate status if open and unlocked", () => {
     const component = render(<Controls />);
-
     component.getByText(/close gate/i);
     component.getByText(/lock gate/i);
   });

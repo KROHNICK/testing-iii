@@ -10,7 +10,11 @@ import {
 import Controls from "./Controls";
 import "jest-dom/extend-expect";
 
+afterEach(cleanup);
+
 describe("<Controls />", () => {
+  afterEach(cleanup);
+
   it("checks if buttons change state", () => {
     const component = render(<Controls />);
 
